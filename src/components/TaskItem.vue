@@ -15,9 +15,8 @@
       </svg>
     </span>
     <span 
-      :class="{ 'text-grey line-through font-normal' : task.completed }" 
       class="text-lg" 
-      v-text="task.body"/>
+      v-text="task"/>
   </div>
 </template>
 
@@ -25,7 +24,7 @@
 export default {
   name: "TaskItem",
   props: {
-    task: { type: Object, required: true }
+    task: { type: String, required: true }
   },
   methods: {
     toggle() {

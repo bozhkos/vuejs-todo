@@ -2,23 +2,20 @@
   <div class="w-full lg:w-1/2 md:w-1/3 sm:w-screen sm:h-screen bg-white sm:shadow-none shadow-md">
     <div class="p-4 border-b flex flex-row justify-between items-center">
       <h2 class="font-semibold">Your tasks</h2>
-      <label class="text-grey-dark items-center">
-        <input 
-          v-model="hideCompleted" 
-          type="checkbox"> Hide completed
-      </label>
     </div>
     <div class="p-4">
       <form 
         class="w-full mb-4 flex flex-row items-center" 
         @submit.prevent="save">
         <input 
-          v-model="body" 
+          v-model="body"
+          aria-label="New task body" 
           type="text" 
           class=" flex-1 flex rounded py-2 px-3 border-b text-grey-darker" 
           placeholder="New task">
         <button 
           type="submit" 
+          aria-label="Submit task"
           class="flex mx-3">
           <svg 
             class="text-green-dark fill-current" 
@@ -60,15 +57,12 @@ export default {
   }),
   computed: {
     tasks() {
-      if (this.hideCompleted) {
-        return this.$store.state.tasks.filter(task => !task.completed);
-      }
       return this.$store.state.tasks;
     }
   },
   methods: {
     save() {
-      this.$store.commit("add", { body: this.body, completed: false });
+      this.$store.commit("add", this.body);
       this.body = "";
     }
   }
