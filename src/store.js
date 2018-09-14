@@ -18,7 +18,7 @@ export default new Vuex.Store({
       state.tasks.push(todo);
     },
     toggle(state, task) {
-      state.tasks.splice(task);
+      state.tasks.splice(task, 1);
     }
   },
   actions: {},

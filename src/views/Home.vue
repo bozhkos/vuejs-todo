@@ -27,8 +27,8 @@
               d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-9h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2H9a1 1 0 0 1 0-2h2V9a1 1 0 0 1 2 0v2z"/></svg>
         </button>
       </form>
-      <div class="h-64 sm:h-full overflow-auto">
-        <div 
+      <div class="min-h-full h-64 sm:h-full overflow-auto">
+        <div
           v-if="tasks.length < 1" 
           class="text-center">
           <p class="text-lg font-medium">You have no tasks in this list.</p>
