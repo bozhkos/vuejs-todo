@@ -1,13 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
 import store from "./store";
+import Home from "@/views/Home";
 import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
-
+Vue.component("todo", Home);
 new Vue({
-  router,
   store,
   render: h => h(App)
 }).$mount("#app");

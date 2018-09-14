@@ -1,8 +1,8 @@
 <template>
   <div 
     id="app" 
-    class="container mx-auto flex items-center justify-center w-full h-screen">
-    <router-view/>
+    class="container mx-auto flex items-center justify-center w-screen h-screen">
+    <todo/>
   </div>
 </template>
 

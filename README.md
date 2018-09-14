@@ -1,5 +1,9 @@
 # vuejs-todo
 
+This small project contains simplest possible task list.
+
+Built with Vue, Vuex & Tailwindcss.
+
 ## Project setup
 ```
 yarn install
